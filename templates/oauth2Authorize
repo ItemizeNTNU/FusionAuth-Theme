@@ -38,6 +38,7 @@
         [#-- This object handles guessing the timezone and filling in the device id of the user --]
         new FusionAuth.OAuth2.Authorize();
       });
+      window.onload = () => document.querySelector(".panel").children[0].innerHTML = "<i class='fa fa-user-circle-o'></i> Login";
     </script>
   [/@helpers.head]
   [@helpers.body]

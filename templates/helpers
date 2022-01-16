@@ -164,7 +164,7 @@
     <div class="${colClass}">
       <div class="panel" data-in-progress>
         [#if title?has_content]
-          <h2><i class="fa fa-user-circle-o"></i> ${title}</h2>
+          <h2>${title}</h2>
         [/#if]
         <main>
           [#nested/]

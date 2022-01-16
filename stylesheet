@@ -69,7 +69,16 @@ body.app-sidebar-closed > main .page-header.sticky {
   background-color: var(--background);
 }
 body > main header.app-header .right-menu nav ul li.help {
-  background: #1e1e1e;
+  background: rgba(0, 0, 0, 0.1);
+}
+body > main header.app-header .back {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 100%;
+  padding: 15px 20px;
+  color: var(--text) !important;
+  background: rgba(0, 0, 0, 0.1);
 }
 main {
   height: 100%;

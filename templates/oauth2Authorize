@@ -38,7 +38,15 @@
         [#-- This object handles guessing the timezone and filling in the device id of the user --]
         new FusionAuth.OAuth2.Authorize();
       });
-      window.onload = () => document.querySelector(".panel").children[0].innerHTML = "<i class='fa fa-user-circle-o'></i> Login";
+      window.onload = () => {
+        const title = document.querySelector(".panel")?.children[0];
+        if (title) title.innerHTML = "<i class='fa fa-user-circle-o'></i> Login";
+        const backLink = document.createElement("a");
+        backLink.href = location.origin.replace("auth.","");
+        backLink.className = "back"
+        backLink.innerHTML = "<i class='fa fa-arrow-left'></i> Back to homepage</a>"
+        document.querySelector("header")?.appendChild(backLink);
+      }
     </script>
   [/@helpers.head]
   [@helpers.body]

@@ -4,6 +4,7 @@ DEVELOPMENT
 :root {
   --text: #ffffff; /* white */
   --background: #353033; /* dark gray */
+  --background-2: #282828 /* darker grey */
   --green-1: #3cb34f; /* lightest green */
   --green-2: #159545; /* light green */
   --green-3: #0f6539; /* green */
@@ -21,7 +22,7 @@ DEVELOPMENT
   box-sizing: inherit;
 }
 body {
-  background: #353033;
+  background: var(--background);
   color: var(--text);
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
@@ -58,7 +59,7 @@ body.app-sidebar-closed > main .page-header.sticky {
   border-bottom: 1px solid rgba(60, 179, 79, 0.1);
   font-weight: 300;
   height: 55px;
-  background-color: #353033;
+  background-color: var(--background);
 }
 body > main header.app-header .right-menu nav ul li.help {
   background: #1e1e1e;
@@ -77,15 +78,15 @@ main.page-body.container::before {
   background-color: rgba(0, 0, 0, 0.1);
 }
 div.panel {
-  background: #282828;
-  border-top: 5px solid #3cb34f;
+  background: var(--background-2);
+  border-top: 5px solid var(--green-1);
 }
 div.panel label,
 div.panel h2 {
   color: var(--text);
 }
 .alert {
-  background: #282828;
+  background: var(--background-2);
   color: #cccccc;
 }
 form .form-row {
@@ -117,7 +118,7 @@ input#password {
   color: var(--text);
 }
 button.button.blue {
-  background: #3cb34f !important;
+  background: var(--green-1) !important;
   display: block;
   width: 100%;
   padding-bottom: 15px !important;
@@ -127,7 +128,7 @@ button.button.blue:hover {
   background: var(--green-3) !important;
 }
 label i.fa {
-  color: #3cb34f;
+  color: var(--green-1);
 }
 .code {
   font-family: menlo, inconsolata, monospace;
@@ -187,7 +188,7 @@ input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 0 2px #0f6539;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 0 2px var(--green-3);
   outline: 0;
 }
 input:focus-visible,

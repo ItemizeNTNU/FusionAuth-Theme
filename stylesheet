@@ -1,0 +1,249 @@
+/* 
+DEVELOPMENT
+*/
+:root {
+  --text: #ffffff; /* white */
+  --background: #353033; /* dark gray */
+  --green-1: #3cb34f; /* lightest green */
+  --green-2: #159545; /* light green */
+  --green-3: #0f6539; /* green */
+  --gray-2: #7f7c7f; /* light gray */
+  --gray-3: #8b8886; /* gray */
+  --gray-4: #969395; /* dark gray */
+  --error: #ff5959;
+
+  --svg-arrow-black: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  --svg-arrow-white: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  background: #353033;
+  color: var(--text);
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--background);
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2em;
+}
+a {
+  color: var(--green-2);
+}
+a:active {
+  color: var(--green-3);
+}
+body.app-sidebar-closed > main .app-header,
+body.app-sidebar-closed > main .page-header.sticky {
+  border-bottom: 1px solid rgba(60, 179, 79, 0.1);
+  font-weight: 300;
+  height: 55px;
+  background-color: #353033;
+}
+body > main header.app-header .right-menu nav ul li.help {
+  background: #1e1e1e;
+}
+main {
+  height: 100%;
+  margin: 0 auto;
+}
+main.page-body.container::before {
+  content: "";
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+div.panel {
+  background: #282828;
+  border-top: 5px solid #3cb34f;
+}
+div.panel label,
+div.panel h2 {
+  color: var(--text);
+}
+.alert {
+  background: #282828;
+  color: #cccccc;
+}
+form .form-row {
+  display: flex;
+  flex-direction: column;
+}
+form .form-row a {
+  text-decoration: underline;
+}
+.input-addon-group span {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+.input-addon-group i.fa.fa-user,
+.input-addon-group i.fa.fa-lock {
+  color: var(--text);
+}
+.input-addon-group > .input:first-child,
+.input-addon-group > input:first-child,
+.input-addon-group > span:first-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+input#loginId,
+input#password {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  color: var(--text);
+}
+button.button.blue {
+  background: #3cb34f !important;
+  display: block;
+  width: 100%;
+  padding-bottom: 15px !important;
+  padding-top: 15px !important;
+}
+button.button.blue:hover {
+  background: var(--green-3) !important;
+}
+label i.fa {
+  color: #3cb34f;
+}
+.code {
+  font-family: menlo, inconsolata, monospace;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.2em;
+  padding: 0.1em 0.2em;
+}
+.code.scrollable {
+  display: block;
+  padding: 0.3em;
+  white-space: pre-wrap;
+}
+.error {
+  color: var(--error);
+}
+input,
+textarea,
+button,
+select,
+label.select select {
+  font-size: 1em;
+  border: none;
+  padding: 0.25em;
+  margin: 0 0.2em;
+  border-radius: 0.25em;
+  background-color: #fff1;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  border: 2px solid #fff0;
+  transition: 200ms linear;
+  width: 15em;
+  appearance: none;
+}
+label {
+  cursor: pointer;
+}
+input,
+textarea {
+  cursor: text;
+}
+
+button:focus,
+button.button.blue:focus {
+  background: var(--green-2) !important;
+  background-color: var(--green-2) !important;
+  outline: none;
+}
+.input:focus,
+input[type="email"]:focus,
+input[type="file"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 0 2px #0f6539;
+  outline: 0;
+}
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+select:focus-visible,
+label.select select:focus-visible,
+button.button.blue:focus-visible {
+  outline: 0.1em solid var(--green-2);
+}
+button:active {
+  background-color: var(--green-1);
+}
+
+input[type="checkbox"] {
+  vertical-align: text-top;
+  appearance: none;
+  margin-top: 0.2em;
+  margin-right: 0;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+}
+input:hover,
+textarea:hover,
+button:hover,
+select:hover,
+label.select select:hover,
+button.button.blue:hover {
+  border-color: #fff8;
+}
+input[type="checkbox"]:checked {
+  border: 0.4em solid var(--green-1);
+  border-radius: 50%;
+}
+label.select::after {
+  display: none;
+}
+label.select select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: var(--svg-arrow-white);
+  background-repeat: no-repeat;
+  background-position: right 0.7em top 50%;
+  background-size: 0.65em auto;
+  color: var(--text);
+}
+label.select select option {
+  background: #3e393c;
+  color: #cccccc;
+}
+@media (min-width: 400px) {
+  body {
+    font-size: 16px;
+  }
+}

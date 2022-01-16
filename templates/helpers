@@ -178,7 +178,7 @@
   [/#if]
 [/#macro]
 
-[#macro main title="Login" rowClass="row center-xs" colClass="col-xs col-sm-8 col-md-6 col-lg-5 col-xl-4"]
+[#macro main title="Login" rowClass="row center-xs" colClass="col-xs col-sm col-md-9 col-lg-8 col-xl-7"]
 <main class="page-body container">
   [@printErrorAlerts rowClass colClass/]
   [@printInfoAlerts rowClass colClass/]

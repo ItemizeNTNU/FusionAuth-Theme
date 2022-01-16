@@ -54,6 +54,7 @@ a:active,
 a:hover,
 a:visited {
   color: var(--green-3);
+  text-decoration: underline;
 }
 body > main {
   padding-top: 55px;

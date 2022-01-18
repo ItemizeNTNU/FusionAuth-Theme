@@ -187,7 +187,9 @@ def push():
         print(f'{c}{k}: {m}{Colors.END}')
 
     print()
-    if input('Confirm push [y/N]: ').lower() not in ['y', 'yes']:
+    if '-y' in sys.argv or '--yes' in sys.argv:
+        print('Confirm push [y/N]: --yes')
+    elif input('Confirm push [y/N]: ').lower() not in ['y', 'yes']:
         error('Canceled by user input')
         exit(7)
     req('PUT', f'/api/theme/{ID}', json={'theme': theme})
@@ -203,10 +205,10 @@ def list_themes():
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
         error('Usage:')
-        error(f'    {sys.argv[0]} push        -  Push a theme to HOST')
-        error(f'    {sys.argv[0]} pull        -  Pull a theme with id from settings.json from HOST')
-        error(f'    {sys.argv[0]} pull <id>   -  Pull a theme with id <id> from HOST')
-        error(f'    {sys.argv[0]} list        -  List available themes on HOST')
+        error(f'    {sys.argv[0]} push        -  Push a theme to HOST. Add -y or --yes to not confirm.')
+        error(f'    {sys.argv[0]} pull        -  Pull a theme with id from settings.json from HOST.')
+        error(f'    {sys.argv[0]} pull <id>   -  Pull a theme with id <id> from HOST.')
+        error(f'    {sys.argv[0]} list        -  List available themes on HOST.')
         exit(3)
 
     if sys.argv[1] == 'push':

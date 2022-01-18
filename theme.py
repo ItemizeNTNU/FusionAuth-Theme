@@ -187,11 +187,9 @@ def push():
         print(f'{c}{k}: {m}{Colors.END}')
 
     print()
-    """Force push
     if input('Confirm push [y/N]: ').lower() not in ['y', 'yes']:
         error('Canceled by user input')
         exit(7)
-    """
     req('PUT', f'/api/theme/{ID}', json={'theme': theme})
     print('Theme pushed.')
 

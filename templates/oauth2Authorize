@@ -38,6 +38,15 @@
         [#-- This object handles guessing the timezone and filling in the device id of the user --]
         new FusionAuth.OAuth2.Authorize();
       });
+      window.onload = () => {
+        const title = document.querySelector(".panel")?.children[0];
+        if (title) title.innerHTML = "<i class='fa fa-user-circle-o'></i> Login";
+        const backLink = document.createElement("a");
+        backLink.href = location.origin.replace("auth.","");
+        backLink.className = "back"
+        backLink.innerHTML = "<i class='fa fa-arrow-left'></i> Back to homepage</a>"
+        document.querySelector("header")?.appendChild(backLink);
+      }
     </script>
   [/@helpers.head]
   [@helpers.body]
@@ -70,7 +79,7 @@
           [@helpers.hidden name="loginId"/]
         [/#if]
 
-        <fieldset>
+        <fieldset style="margin-bottom: 20px;">
           [@helpers.input type="text" name="loginId" id="loginId" autocomplete="username" autocapitalize="none" autocomplete="on" autocorrect="off" spellcheck="false" autofocus=(!loginId?has_content) placeholder=theme.message('loginId') leftAddon="user" disabled=(showPasswordField && hasDomainBasedIdentityProviders)/]
           [#if showPasswordField]
             [@helpers.input type="password" name="password" id="password" autocomplete="current-password" autofocus=loginId?has_content placeholder=theme.message('password') leftAddon="lock"/]

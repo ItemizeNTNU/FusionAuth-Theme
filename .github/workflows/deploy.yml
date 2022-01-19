@@ -22,8 +22,14 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
       
-      - name: Deploy
+      - name: Deploy Themes
         env:
           FUSION_AUTH_API_TOKEN: ${{ secrets.FUSION_AUTH_API_TOKEN }}
           HOST: ${{ secrets.HOST }}
         run: python theme.py push --yes
+
+      - name: Deploy Email Templates
+        env:
+          FUSION_AUTH_API_TOKEN: ${{ secrets.FUSION_AUTH_API_TOKEN }}
+          HOST: ${{ secrets.HOST }}
+        run: python emails.py push --yes

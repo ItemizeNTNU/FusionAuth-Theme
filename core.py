@@ -70,7 +70,7 @@ def print(*args, **kwargs):
         'prefix': '[' + Colors.BOLD + Colors.BLUE + '*' + Colors.END + '] ',
         **kwargs
     }
-    msg = kwargs['sep'].join(repr(arg) for arg in args)
+    msg = kwargs['sep'].join(arg if type(arg) == str else repr(arg) for arg in args)
     if msg:
         msg = kwargs['prefix'] + ('\n' + kwargs['prefix']).join(msg.split('\n'))
     del kwargs['prefix']

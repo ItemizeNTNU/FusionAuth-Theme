@@ -22,10 +22,11 @@ def save_to_disk(dirname, id, name, subject, html, txt, new=True):
     write_files(files)
 
 
-def upload(id, name, subject, html, txt, save_non_id_dirname=None):
+def upload(id, name, subject, html, txt, create=False, save_non_id_dirname=None):
     if id:
         id = '/' + id
-    res = req('PUT' if id else 'POST', '/api/email/template' + id, json={
+        create = True
+    res = req('POST' if create else 'PUT', '/api/email/template' + id, json={
         'emailTemplate': {
             'name': name,
             'defaultSubject': subject,
@@ -89,7 +90,8 @@ def push():
     print()
     confirm('email push')
     for dirname, email in local.items():
-        upload(**email, save_non_id_dirname=dirname)
+        create = email['id'] not in remote
+        upload(**email, create=create, save_non_id_dirname=dirname)
     print(f'{len(local)} email templates pushed.')
 
 

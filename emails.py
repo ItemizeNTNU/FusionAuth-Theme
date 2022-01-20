@@ -25,7 +25,7 @@ def save_to_disk(dirname, id, name, subject, html, txt, new=True):
 def upload(id, name, subject, html, txt, create=False, save_non_id_dirname=None):
     if id:
         id = '/' + id
-	else:
+    else:
         create = True
     res = req('POST' if create else 'PUT', '/api/email/template' + id, json={
         'emailTemplate': {

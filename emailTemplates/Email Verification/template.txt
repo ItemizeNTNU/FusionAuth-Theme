@@ -12,7 +12,7 @@ ${verificationOneTimeCode}
 [#else]
 To complete your email verification click on the following link.
 
-https://auth.dev.itemize.no/email/verify/${verificationId}?client_id=${(application.oauthConfiguration.clientId)!''}&postMethod=true&tenantId=${user.tenantId}
+https://${tenant.issuer}/email/verify/${verificationId}?client_id=${(application.oauthConfiguration.clientId)!''}&postMethod=true&tenantId=${user.tenantId}
 [/#if]
 
 - Itemize Drift

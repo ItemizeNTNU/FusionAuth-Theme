@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
   <title></title>
   <meta charset="UTF-8">
@@ -15,13 +16,20 @@
   </noscript>
   <![endif]-->
   <style>
-    table, td, div, h1, p {font-family:Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}
+    table,
+    td,
+    div,
+    h1,
+    p {
+      font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    }
   </style>
 </head>
+
 <body style="margin:0;padding:0;">
-  <br/>
-  <br/>
-  <br/>
+  <br />
+  <br />
+  <br />
   <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
     <tr>
       <td align="center" style="padding:0;">
@@ -43,7 +51,7 @@
                       Your account has been created and you must setup a password. Click on the following link to setup your password.
                     </p>
                     <p style="margin:0;font-size:16px;line-height:24px;font-family:Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
-                      <a href="https://auth.dev.itemize.no/password/change/${changePasswordId}?client_id=${(application.oauthConfiguration.clientId)!''}&tenantId=${user.tenantId}" style="color:#159545;text-decoration:underline;">https://auth.dev.itemize.no/password/change/${changePasswordId}?client_id=${(application.oauthConfiguration.clientId)!''}&tenantId=${user.tenantId}</a>
+                      <a href="https://${tenant.issuer}/password/change/${changePasswordId}?client_id=${(application.oauthConfiguration.clientId)!''}&tenantId=${user.tenantId}" style="color:#159545;text-decoration:underline;">https://${tenant.issuer}/password/change/${changePasswordId}?client_id=${(application.oauthConfiguration.clientId)!''}&tenantId=${user.tenantId}</a>
                     </p>
                     <p>
                       - Itemize Drift
@@ -93,8 +101,9 @@
       </td>
     </tr>
   </table>
-  <br/>
-  <br/>
-  <br/>
+  <br />
+  <br />
+  <br />
 </body>
+
 </html>

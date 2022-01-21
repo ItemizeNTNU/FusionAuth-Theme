@@ -5,8 +5,8 @@
 
 <p>Follow this link to change your password.</p>
 
-<a href="https://auth.dev.itemize.no/password/forgot?client_id=${(application.oauthConfiguration.clientId)!''}&email=${user.email?url}&tenantId=${user.tenantId}">
-  https://auth.dev.itemize.no/password/forgot?client_id=${(application.oauthConfiguration.clientId)!''}&email=${user.email?url}&tenantId=${user.tenantId}
+<a href="https://${tenant.issuer}/password/forgot?client_id=${(application.oauthConfiguration.clientId)!''}&email=${user.email?url}&tenantId=${user.tenantId}">
+  https://${tenant.issuer}/password/forgot?client_id=${(application.oauthConfiguration.clientId)!''}&email=${user.email?url}&tenantId=${user.tenantId}
 </a>
 
-- FusionAuth Admin
+- Itemize Drift

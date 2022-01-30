@@ -59,7 +59,7 @@
          [@helpers.hidden name="email"/]
          [@helpers.hidden name="verificationId"/]
          <div class="form-row">
-           <button style="background: #fff; border: none; cursor: pointer;" class="link blue-text"><i class="fa fa-arrow-right"></i> ${theme.message('email-verification-required-send-another')} </button>
+           <button style="background: #fff; border: none; cursor: pointer; padding: 0.5em; width: 100%;" class="link blue-text"><i class="fa fa-arrow-right"></i> ${theme.message('email-verification-required-send-another')} </button>
          </div>
        </form>
 
